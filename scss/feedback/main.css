@@ -1,0 +1,180 @@
+.header {
+  padding: 20px 0;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-menu {
+  display: flex;
+  gap: 44px;
+}
+.header-menu__item {
+  font-size: 20px;
+  line-height: 23px;
+  font-family: "ubuntu", sans-serif;
+}
+.header-menu__link--active {
+  color: #3A8BEA;
+}
+.header-authentication {
+  display: flex;
+  gap: 33px;
+  align-items: center;
+}
+.header-authentication__button {
+  font-size: 20px;
+  line-height: 25px;
+  color: #000000;
+  font-family: "allerta", sans-serif;
+}
+.header-authentication__button--registration {
+  background-color: #3A8BEA;
+  color: #FFFFFF;
+  padding: 9px 11px;
+  border-radius: 20px;
+}
+
+.footer {
+  background-color: #DDDDDD;
+  font-family: "inter";
+  padding: 50px 0px;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+}
+.footer-content__text {
+  text-align: center;
+  color: #9A9A9A;
+  background-color: #D2D2D2;
+  padding: 14px 224px;
+  max-width: 1320px;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 90px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+.footer-contact__number {
+  color: #9A9A9A;
+  font-size: 36px;
+  line-height: 44px;
+}
+.footer-contact__work {
+  font-size: 27px;
+  color: #9A9A9A;
+  line-height: 33px;
+}
+.footer-information {
+  display: flex;
+  align-items: end;
+  font-size: 27px;
+  line-height: 33px;
+  color: #9A9A9A;
+}
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-social__title {
+  font-size: 27px;
+  line-height: 33px;
+  color: #9A9A9A;
+}
+.footer-social-icons {
+  display: flex;
+  gap: 24px;
+}
+
+.feedback {
+  font-family: "ubuntu", sans-serif;
+  padding: 67px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background: url(../../img/secondbg.png);
+}
+.feedback-title {
+  color: #FFFFFF;
+  font-size: 48px;
+  line-height: 55px;
+}
+.feedback-description {
+  margin-top: 28px;
+  color: #FFFFFF;
+  max-width: 860px;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+.feedback-form {
+  margin-top: 67px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  max-width: 1164px;
+}
+.feedback-form__item {
+  width: 100%;
+  max-width: 760px;
+  padding: 30px 0px 30px 52px;
+  border-radius: 25px;
+  border: solid 1px #D2D2D2;
+  resize: none;
+}
+.feedback-form__item::-moz-placeholder { /* Most modern browsers support this now. */
+  color: #707070;
+  font-size: 29px;
+}
+.feedback-form__item::placeholder { /* Most modern browsers support this now. */
+  color: #707070;
+  font-size: 29px;
+}
+.feedback-form__button {
+  margin-top: 63px;
+  width: 100%;
+  max-width: 468px;
+  padding: 35px 160px;
+  background-color: #3A8BEA;
+  border-radius: 25px;
+  color: #FFFFFF;
+  font-size: 29px;
+  line-height: 33px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "ubuntu";
+  src: url("../fonts/ubuntu/Ubuntu-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "allerta";
+  src: url("../fonts/allerta/Allerta-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "inter";
+  src: url("../fonts/inter/Inter-Regular.ttf");
+  font-weight: 400;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,24 @@
+.advertisement{
+    padding: 44px 0px;
+    font-family: "ubuntu",sans-serif;
+    &-content{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &-link{
+        color: #3A8BEA;
+        line-height: 37px;
+        font-size: 32px;
+    }
+
+    &-form{
+        display: flex;
+        flex-direction: column;
+
+        &__item{
+            max-width: 592px;
+        }
+    }
+}
