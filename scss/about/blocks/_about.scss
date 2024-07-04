@@ -1,0 +1,47 @@
+.about{
+    font-family: 'allerta',sans-serif;
+    padding: 70px 0px;
+    &-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-title{
+        font-size: 40px;
+        line-height: 51px;
+    }
+
+    &-information{
+        margin-top: 60px;
+        font-size: 34px;
+        line-height: 41px;
+    }
+
+    &-services{
+        margin-top: 20px;
+        font-size: 34px;
+        line-height: 41px;
+    }
+    &-list{
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+
+        &__item{
+            font-size: 34px;
+            line-height: 41px;
+        }
+    }
+
+    &-text{
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+
+        &__item{
+            font-size: 32px;
+            line-height: 41px;
+            text-align: justify;
+        }
+    }
+}

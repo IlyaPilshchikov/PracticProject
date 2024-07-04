@@ -1,0 +1,41 @@
+.advertisement {
+  padding: 44px 0px;
+  font-family: "ubuntu", sans-serif;
+}
+.advertisement-content {
+  display: flex;
+  flex-direction: column;
+}
+.advertisement-link {
+  color: #3A8BEA;
+  line-height: 37px;
+  font-size: 32px;
+}
+.advertisement-form {
+  display: flex;
+  flex-direction: column;
+}
+.advertisement-form__item {
+  max-width: 592px;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "ubuntu";
+  src: url("../fonts/ubuntu/Ubuntu-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "allerta";
+  src: url("../fonts/allerta/Allerta-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "inter";
+  src: url("../fonts/inter/Inter-Regular.ttf");
+  font-weight: 400;
+}/*# sourceMappingURL=main.css.map */

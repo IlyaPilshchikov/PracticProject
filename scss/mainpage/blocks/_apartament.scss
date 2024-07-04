@@ -1,0 +1,55 @@
+.apartament{
+    font-family: 'ubuntu',sans-serif;
+    padding:30px 0px;
+    &-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:20px;
+    }
+
+    &-card{
+        display: flex;
+        flex-direction: column;
+
+        &__image{
+            max-height:155px;
+            max-width: 400px;
+            border-radius: 9px;
+            object-fit: cover;
+        }
+
+        &-menu{
+            display: flex;
+            gap:30px;
+            align-items: center;
+
+            &__item{
+                color:#000000;
+                font-size: 24px;
+                line-height: 28px;
+            }
+
+            &__counter{
+                font-size: 20px;
+                line-height: 24px;
+                color:#707070;
+            }
+        }
+
+        &-container{
+            margin-top: 40px;
+            flex-direction: column;
+            display: flex;
+            gap:23px;
+        }
+
+        &__title{
+            margin-top: 20px;
+            font-size: 40px;
+            line-height: 46px;
+            color: #000000;
+        }
+    }
+}

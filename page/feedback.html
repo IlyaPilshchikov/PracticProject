@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="../scss/feedback/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html"><img src="../img/Logo.svg"></a>
+                <ul class="header-menu">
+                    <li class="header-menu__item"><a href="index.html" class="header-menu__link ">Главная страница</a></li>
+                    <li class="header-menu__item"><a href="catalog.html" class="header-menu__link ">Каталог</a></li>
+                    <li class="header-menu__item"><a href="about.html" class="header-menu__link">О нас</a></li>
+                    <li class="header-menu__item"><a href="feedback.html" class="header-menu__link header-menu__link--active">Обратная связь</a></li>
+                    <li class="header-menu__item"><a href="lk.html" class="header-menu__link">Личный кабинет</a></li>
+                </ul>
+
+                <div class="header-authentication">
+                    <a href="login.html" class="header-authentication__button">Войти</a>
+                    <a href="registration.html" class="header-authentication__button header-authentication__button--registration">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="feedback">
+        <p class="feedback-title">Обратная связь</p>
+        <p class="feedback-description">Если у вас срочный вопрос, позвоните в службу поддержки: 8(000) 32-32-32 Есть вопросы или пожелания? Заполните форму обратной связи</p>
+        <form class="feedback-form">
+            <input class="feedback-form__item" type="text" placeholder="Ваше имя*" value="">
+            <input class="feedback-form__item" type="email" placeholder="Email , на который будет отправлено письмо *" value="">
+            <textarea class="feedback-form__item" placeholder="Текст сообщения"></textarea>
+            <button class="feedback-form__button" type="submit">Отправить</button>
+        </form>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-content__text">При копировании материалов активная ссылка на источник обязательна!</p>
+                <div class="footer-container">
+                    <div class="footer-contact">
+                        <p class="footer-contact__number">8 (000) 32-32-32</p>
+                        <p class="footer-contact__work">Контакты<br/>Работа в компании<br/>Мобильная версия<br/>© 2010-2024, ООО «СОВА»</p>
+                    </div>
+                    <p class="footer-information">
+                        Недвижимость<br/>Франшиза<br/>Новостройки от застройщиков<br/>Политика ОПД<br/>Антикоррупционная политика
+                    </p>
+                    <div class="footer-social">
+                        <p class="footer-social__title">Мы в соцсетях</p>
+                        <div class="footer-social-icons">
+                            <a href="#" class="footer-social-icons__link"><img src="../img/telegram.svg" class="footer-social-icons__item"></a>
+                            <a href="#" class="footer-social-icons__link"><img src="../img/viber.svg" class="footer-social-icons__item"></a>
+                            <a href="#" class="footer-social-icons__link"><img src="../img/vk.svg" class="footer-social-icons__item"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
