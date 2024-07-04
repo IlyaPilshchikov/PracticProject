@@ -1,0 +1,43 @@
+.lk{
+    padding: 44px 0px;
+    font-family: "ubuntu",sans-serif;
+    &-content{
+        display: flex;
+        flex-direction: column;
+
+        &__link{
+            color: #3A8BEA;
+            line-height: 37px;
+            font-size: 32px;
+        }
+    }
+    &-advertisement{
+        margin-top: 235px;
+        display: flex;
+        flex-direction: column;
+
+        &__title{
+            font-size: 48px;
+            line-height: 55px;
+        }
+
+        &__subtitle{
+            margin-top: 14px;
+            line-height: 42px;
+            font-size: 36px;
+            color: #707070;
+        }
+
+        &__link{
+            margin-top: 100px;
+            padding: 48px 107px;
+            background-color: #3A8BEA;
+            border-radius: 25px;
+            max-width: 786px;
+            color: #FFFFFF;
+            font-size: 50px;
+            line-height: 57px;
+        }
+    }
+
+}
