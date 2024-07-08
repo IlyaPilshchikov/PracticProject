@@ -36,6 +36,72 @@
   border-radius: 20px;
 }
 
+
+
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(../../img/Главн.png) no-repeat center center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.toggle-buttons {
+  margin-bottom:-10px;
+}
+.toggle-buttons button {
+  padding: 14px 28px;
+  cursor: pointer;
+  border-radius: 20%;
+}
+.form-block {
+  background-color: white;
+  border-radius: 55px;
+  padding: 10px;
+  box-shadow: 0 40px 8px rgba(0, 0, 0, 0.1);
+}
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.search-form label, .search-form select, .search-form input, .search-form button {
+  margin: 5px;
+  padding: 10px;
+}
+.studio-options {
+  display: flex;
+  align-items: center;
+}
+.search-button {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  background: #3A8BEA;
+  border-radius: 10%;
+}
+.button-search-top{
+background: #FFFFFF;
+}
+.button-search-top-active {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18.15px;
+  color: #FFFFFF;
+  background: #3A8BEA;
+}
+
+
+
 .apartament {
   font-family: "ubuntu", sans-serif;
   padding: 30px 0px;

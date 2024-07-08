@@ -27,6 +27,47 @@
             </div>
         </div>
     </header>
+
+    <div class="search-container">
+        <div class="toggle-buttons">
+            <button class="button-search-top-active">Купить</button>
+            <button class="button-search-top">Снять</button>
+            <button class="button-search-top">Продать</button>
+            <button class="button-search-top">Сдать</button>
+        </div>
+        <div class="form-block">
+            <form class="search-form" action="/search" method="get">
+                <label for="propertyType">Тип недвижимости:</label>
+                <select id="propertyType" name="propertyType">
+                    <option value="apartment">Квартира</option>
+                    <option value="studio">Студия</option>
+                </select>
+                <div class="studio-options">
+                    <label for="propertyType">Студия :
+                        <input type="radio" name="studioCount" value="1"> 1
+                    </label>
+                    <label>
+                        <input type="radio" name="studioCount" value="2"> 2
+                    </label>
+                    <label>
+                        <input type="radio" name="studioCount" value="3"> 3
+                    </label>
+                    <label>
+                        <input type="radio" name="studioCount" value="4"> 4
+                    </label>
+                </div>
+                <label for="priceRange">Цена:</label>
+                <input type="number" id="priceFrom" name="priceFrom" placeholder="От">
+                <input type="number" id="priceTo" name="priceTo" placeholder="До">
+                <label for="location">Где:</label>
+                <input type="text" id="location" name="location" placeholder="Местоположение">
+                <label for="details">Детали:</label>
+                <input type="text" id="details" name="details" placeholder="Дополнительные детали">
+                <button class="search-button" type="submit">Поиск</button>
+            </form>
+        </div>
+    </div>
+
     <div class="apartament">
         <div class="container">
             <div class="apartament-wrapper">
