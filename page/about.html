@@ -6,14 +6,22 @@
     <title>О нас</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="../scss/about/main.css">
+    <script src="/JS/jquery.js"></script>
+    <link rel="stylesheet" href="header.css">
+    <script src="header.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="index.html"><img src="../img/Logo.svg"></a>
-                <ul class="header-menu">
-                    <li class="header-menu__item"><a href="index.html" class="header-menu__link">Главная страница</a></li>
+                <a href="index.html"><img src="../img/Logo.svg" alt="Logo"></a>
+                <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="header-menu">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
+                <ul class="header-menu" id="header-menu">
+                    <li class="header-menu__item"><a href="index.html" class="header-menu__link ">Главная страница</a></li>
                     <li class="header-menu__item"><a href="catalog.html" class="header-menu__link">Каталог</a></li>
                     <li class="header-menu__item"><a href="about.html" class="header-menu__link header-menu__link--active">О нас</a></li>
                     <li class="header-menu__item"><a href="feedback.html" class="header-menu__link">Обратная связь</a></li>
@@ -26,6 +34,8 @@
                 </div>
             </div>
         </div>
+
+
     </header>
 
 
