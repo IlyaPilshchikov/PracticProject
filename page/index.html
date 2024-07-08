@@ -6,13 +6,21 @@
     <title>Главная страница</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="../scss/mainpage/main.css">
+    <script src="/JS/jquery.js"></script>
+    <link rel="stylesheet" href="header.css">
+    <script src="header.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="index.html"><img src="../img/Logo.svg"></a>
-                <ul class="header-menu">
+                <a href="index.html"><img src="../img/Logo.svg" alt="Logo"></a>
+                <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="header-menu">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
+                <ul class="header-menu" id="header-menu">
                     <li class="header-menu__item"><a href="index.html" class="header-menu__link header-menu__link--active">Главная страница</a></li>
                     <li class="header-menu__item"><a href="catalog.html" class="header-menu__link">Каталог</a></li>
                     <li class="header-menu__item"><a href="about.html" class="header-menu__link">О нас</a></li>
@@ -26,47 +34,245 @@
                 </div>
             </div>
         </div>
-    </header>
 
-    <div class="search-container">
-        <div class="toggle-buttons">
-            <button class="button-search-top-active">Купить</button>
-            <button class="button-search-top">Снять</button>
-            <button class="button-search-top">Продать</button>
-            <button class="button-search-top">Сдать</button>
+
+    </header>
+    <style>
+.xxx{
+    background: url(../img/bgimage.png) no-repeat;
+    background-position: center center;
+    opacity: 80%;
+    height: 990px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.tabs-container {
+
+    margin: 50px auto;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    gap: 7px;
+}
+
+.tab {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    max-width: 146px;
+    width:100%;
+    text-align: center;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.tab.active {
+    background-color: #3A8BEA;
+    color: #FFFFFF;
+}
+
+.tabs-content {
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: flex;
+    gap:37px;
+}
+.home-num{
+    cursor: pointer;
+    color: black; /* Начальный цвет текста */
+    transition: color 0.3s ease; /* Добавляем плавный переход */
+}
+.home-nums{
+    display: none;
+    cursor: pointer;
+
+}
+.home-num {
+    cursor: pointer;
+
+}
+
+.home-num.selected {
+    color: #3A8BEA;; /* Измените цвет на нужный */
+}
+input{
+    border: none;
+
+}
+input:focus {
+    outline: none;
+}
+
+.tab-content__select{
+    font-size: 15px;
+    border: none;
+    width: 100px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    background: url(/img/Polygon\ 1.png) no-repeat right ;
+    -webkit-appearance: none;
+    background-position-x: 85px;
+}
+select:focus {
+    outline: none;
+}
+.home-container{
+    display: flex;
+    gap:18px;
+    justify-content: center;
+    align-items: center;
+}
+.tab-button{
+    color: #FFFFFF;
+    background-color: #3A8BEA;
+    padding: 20px 30px;
+    border-radius: 20px;
+    font-family: "ubuntu", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+}
+    </style>
+
+<div class="xxx">
+<div class="tabs-container">
+    <ul class="tabs">
+        <li class="tab active" data-target="#tab-1">Купить</li>
+        <li class="tab" data-target="#tab-2">Снять</li>
+        <li class="tab" data-target="#tab-3">Продать</li>
+        <li class="tab" data-target="#tab-4">Сдать</li>
+    </ul>
+
+    <div class="tabs-content">
+        <div id="tab-1" class="tab-content active">
+            <select class="tab-content__select">
+                <option value="Квартиру">Квартиру</option>
+                <option value="Дом">Дом</option>
+            </select>
+            <div class="home-container">
+                <label class="home-num" for="studio">Студия</label>
+                <label class="home-num" for="one">1</label>
+                <label class="home-num" for="two">2</label>
+                <label class="home-num" for="thri">3</label>
+                <label class="home-num" for="four">4+</label>
+                <input class="home-nums" type="radio" id="studio" name="room-type">
+                <input class="home-nums" type="radio" id="one" name="room-type">
+                <input class="home-nums" type="radio" id="two" name="room-type">
+                <input class="home-nums" type="radio" id="thri" name="room-type">
+                <input class="home-nums" type="radio" id="four" name="room-type">
+            </div>
+            <input class="home-sallary" type="text" id="sallary" placeholder="Цена от">
+            <input class="home-sallary" type="text" id="sallary" placeholder="- до">
+            <input class="home-sallary" type="text" id="sallary" placeholder="Где">
+            <input class="home-sallary" type="text" id="sallary" placeholder="Детали">
+            <button class="tab-button">Поиск</button>
         </div>
-        <div class="form-block">
-            <form class="search-form" action="/search" method="get">
-                <label for="propertyType">Тип недвижимости:</label>
-                <select id="propertyType" name="propertyType">
-                    <option value="apartment">Квартира</option>
-                    <option value="studio">Студия</option>
-                </select>
-                <div class="studio-options">
-                    <label for="propertyType">Студия :
-                        <input type="radio" name="studioCount" value="1"> 1
-                    </label>
-                    <label>
-                        <input type="radio" name="studioCount" value="2"> 2
-                    </label>
-                    <label>
-                        <input type="radio" name="studioCount" value="3"> 3
-                    </label>
-                    <label>
-                        <input type="radio" name="studioCount" value="4"> 4
-                    </label>
-                </div>
-                <label for="priceRange">Цена:</label>
-                <input type="number" id="priceFrom" name="priceFrom" placeholder="От">
-                <input type="number" id="priceTo" name="priceTo" placeholder="До">
-                <label for="location">Где:</label>
-                <input type="text" id="location" name="location" placeholder="Местоположение">
-                <label for="details">Детали:</label>
-                <input type="text" id="details" name="details" placeholder="Дополнительные детали">
-                <button class="search-button" type="submit">Поиск</button>
-            </form>
+
+        <div id="tab-2" class="tab-content">
+            <select class="tab-content__select">
+                <option value="Квартиру">Квартиру</option>
+                <option value="Дом">Дом</option>
+            </select>
+            <div class="home-container">
+                <label class="home-num" for="studio">Студия</label>
+                <label class="home-num" for="one">1</label>
+                <label class="home-num" for="two">2</label>
+                <label class="home-num" for="thri">3</label>
+                <label class="home-num" for="four">4+</label>
+                <input class="home-nums" type="radio" id="studio" name="room-type">
+                <input class="home-nums" type="radio" id="one" name="room-type">
+                <input class="home-nums" type="radio" id="two" name="room-type">
+                <input class="home-nums" type="radio" id="thri" name="room-type">
+                <input class="home-nums" type="radio" id="four" name="room-type">
+            </div>
+            <input class="home-sallary" type="text" id="sallary" placeholder="Цена от">
+            <input class="home-sallary" type="text" id="sallary" placeholder="- до">
+            <input class="home-sallary" type="text" id="sallary" placeholder="Где">
+            <input class="home-sallary" type="text" id="sallary" placeholder="Детали">
+            <button class="tab-button">Поиск</button>
+        </div>
+
+
+        <div id="tab-3" class="tab-content">
+            <select class="tab-content__select">
+                <option value="Квартиру">Квартиру</option>
+                <option value="Дом">Дом</option>
+            </select>
+            <input class="home-sallary" type="text" id="sallary" placeholder="Ваш телефон">
+            <input class="home-sallary" type="text" id="sallary" placeholder="Ваше имя">
+            <input class="home-sallary" type="text" id="sallary" placeholder="Детали">
+            <button class="tab-button">Поиск</button>
+        </div>
+
+        <div id="tab-4" class="tab-content">
+            <select class="tab-content__select">
+                <option value="Квартиру">Квартиру</option>
+                <option value="Дом">Дом</option>
+            </select>
+            <input class="home-sallary" type="text" id="sallary" placeholder="Ваш телефон">
+            <input class="home-sallary" type="text" id="sallary" placeholder="Ваше имя">
+            <input class="home-sallary" type="text" id="sallary" placeholder="Детали">
+            <button class="tab-button">Поиск</button>
         </div>
     </div>
+</div>
+</div>
+<script>
+$(document).ready(function() {
+    // Обработка вкладок
+    $(".tab").click(function() {
+        const target = $(this).data("target");
+        $(".tab").removeClass("active");
+        $(this).addClass("active");
+        $(".tab-content").removeClass("active");
+        $(target).addClass("active");
+    });
+});
+$(document).ready(function() {
+    function updateSelectedLabel() {
+        $('.home-num').removeClass('selected');
+        $('.home-nums:checked').each(function() {
+            $('label[for="' + this.id + '"]').addClass('selected');
+        });
+    }
+
+    $('.home-num').on('click', function() {
+        $('#' + $(this).attr('for')).prop('checked', true);
+        updateSelectedLabel();
+    });
+
+    // Инициализация начального состояния
+    updateSelectedLabel();
+});
+
+</script>
+
 
     <div class="apartament">
         <div class="container">
