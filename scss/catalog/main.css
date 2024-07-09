@@ -160,6 +160,38 @@
   margin: 0 auto;
 }
 
+.tab-content__select{
+  font-size: 15px;
+  border: none;
+  width: 110px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 5px;
+  background: url(/img/Polygon\ 1.png) no-repeat right ;
+  -webkit-appearance: none;
+  background-position-x: 85px;
+}
+.catalog-text{
+  font-size: 18px;
+  text-align: center;
+}
+
+input{
+  border: none;
+
+}
+input:focus {
+  outline: none;
+}
+
+.home-salary{
+  color: #999999;
+  border: none;
+  outline: none;
+}
+
 @font-face {
   font-family: "ubuntu";
   src: url("../fonts/ubuntu/Ubuntu-Regular.ttf");

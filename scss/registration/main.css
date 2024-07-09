@@ -43,8 +43,6 @@
   align-items: center;
   background: url(../../img/bgimage.png);
   padding: 70px 0px;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 .login-form {
   display: flex;

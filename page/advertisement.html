@@ -11,9 +11,32 @@
     <script src="header.js"></script>
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html"><img src="../img/Logo.svg" alt="Logo"></a>
+                <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="header-menu">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
+                <ul class="header-menu" id="header-menu">
+                    <li class="header-menu__item"><a href="index.html" class="header-menu__link header-menu__link--active">Главная страница</a></li>
+                    <li class="header-menu__item"><a href="catalog.html" class="header-menu__link">Каталог</a></li>
+                    <li class="header-menu__item"><a href="about.html" class="header-menu__link">О нас</a></li>
+                    <li class="header-menu__item"><a href="feedback.html" class="header-menu__link">Обратная связь</a></li>
+                    <li class="header-menu__item"><a href="lk.html" class="header-menu__link">Личный кабинет</a></li>
+                </ul>
+
+                <div class="header-authentication">
+                    <a href="login.html" class="header-authentication__button">Войти</a>
+                    <a href="registration.html" class="header-authentication__button header-authentication__button--registration">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="advertisement">
         <div class="container">
-            <a href="lk.html" class="advertisement-link">Вернуться в личный кабинет</a>
             <div class="advertisement-content">
                 <form class="advertisement-form">
                     <label class="advertisement-form__title">Новое объявление</label>
@@ -29,8 +52,60 @@
                 </div>
                 <button class="advertisement-form__button">Опубликовать</button>
                 </form>
+
+                <div class="advertisement-wrapper">
+                    <div class="advertisement-add">
+                        <img class="advertisement-add__img" src="../img/home2.png" alt="#">
+                        <div class="advertisement-add-content">
+                            <p class="advertisement-add-content__title">Новостройка </p>
+                            <p class="advertisement-add-content__price">Цена : 3 231 000 ₽ </p>
+                            <p class="advertisement-add-content__description">1-к. квартира, 47,7 м², 2/9 эт.</p>
+                        <div class="advertisement-add-button">
+                            <button class="advertisement-add-button__item">Редактировать</button>
+                            <button class="advertisement-add-button__item">Удалить</button>
+                        </div>
+
+                    </div>
+                    </div>
+                    <div class="advertisement-add">
+                        <img class="advertisement-add__img" src="../img/home2.png" alt="#">
+                        <div class="advertisement-add-content">
+                            <p class="advertisement-add-content__title">Новостройка </p>
+                            <p class="advertisement-add-content__price">Цена : 3 231 000 ₽ </p>
+                            <p class="advertisement-add-content__description">1-к. квартира, 47,7 м², 2/9 эт.</p>
+                        <div class="advertisement-add-button">
+                            <button class="advertisement-add-button__item">Редактировать</button>
+                            <button class="advertisement-add-button__item">Удалить</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-content__text">При копировании материалов активная ссылка на источник обязательна!</p>
+                <div class="footer-container">
+                    <div class="footer-contact">
+                        <p class="footer-contact__number">8 (000) 32-32-32</p>
+                        <p class="footer-contact__work">Контакты<br/>Работа в компании<br/>Мобильная версия<br/>© 2010-2024, ООО «СОВА»</p>
+                    </div>
+                    <p class="footer-information">
+                        Недвижимость<br/>Франшиза<br/>Новостройки от застройщиков<br/>Политика ОПД<br/>Антикоррупционная политика
+                    </p>
+                    <div class="footer-social">
+                        <p class="footer-social__title">Мы в соцсетях</p>
+                        <div class="footer-social-icons">
+                            <a href="#" class="footer-social-icons__link"><img src="../img/telegram.svg" class="footer-social-icons__item"></a>
+                            <a href="#" class="footer-social-icons__link"><img src="../img/viber.svg" class="footer-social-icons__item"></a>
+                            <a href="#" class="footer-social-icons__link"><img src="../img/vk.svg" class="footer-social-icons__item"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
