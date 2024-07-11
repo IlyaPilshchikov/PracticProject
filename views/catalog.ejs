@@ -19,7 +19,6 @@
                     <li class="header-menu__item"><a href="/feedback" class="header-menu__link">Обратная связь</a></li>
                     <li class="header-menu__item"><a href="/ls" class="header-menu__link">Личный кабинет</a></li>
                 </ul>
-
                 <div class="header-authentication">
                     <a href="/auth" class="header-authentication__button">Войти</a>
                     <a href="/registration" class="header-authentication__button header-authentication__button--registration">Регистрация</a>
@@ -27,16 +26,15 @@
             </div>
         </div>
     </header>
-
     <div class="search-container">
         <div class="form-block">
-            <form class="search-form" action="/search" method="get">
+            <form class="search-form" action="/catalog/search" method="get">
                 <label for="propertyType">Тип недвижимости:</label>
-                <select id="propertyType" name="propertyType">
-                    <option value="apartment">Квартира</option>
-                    <option value="house">Дом</option>
+                <select id="title" name="title">
+                    <option value="квартира">Квартира</option>
+                    <option value="дом">Дом</option>
                 </select>
-
+            
                 <label for="roomCount">Количество комнат:</label>
                 <select id="roomCount" name="roomCount">
                     <option value="1">1</option>
@@ -44,131 +42,67 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
-
+            
                 <label for="priceRange">Стоимость:</label>
                 <input type="number" id="priceFrom" name="priceFrom" placeholder="От">
                 <input type="number" id="priceTo" name="priceTo" placeholder="До">
-
+            
                 <label for="residentialComplex">Жилой комплекс:</label>
                 <input type="text" id="residentialComplex" name="residentialComplex" placeholder="Название жилого комплекса">
-
+            
                 <label for="area">Площадь:</label>
                 <input type="number" id="areaFrom" name="areaFrom" placeholder="От">
                 <input type="number" id="areaTo" name="areaTo" placeholder="До">
 
+                <label for="purpose">Цель объявления:</label>
+                <select id="purpose" name="purpose">
+                    <option value="купить">Купить</option>
+                    <option value="снять">Снять</option>
+                    <option value="продать">Продать</option>
+                    <option value="сдать">Сдать</option>
+                </select>
+            
+                <div class="sort-container">
+                    <label for="sortBy">Сортировать по:</label>
+                    <select id="sortBy" name="sortBy">
+                        <option value="price">Цена</option>
+                        <option value="area">Площадь</option>
+                        <option value="rooms">Количество комнат</option>
+                    </select>
+            
+                    <label for="sortOrder">Направление:</label>
+                    <select id="sortOrder" name="sortOrder">
+                        <option value="asc">По возрастанию</option>
+                        <option value="desc">По убыванию</option>
+                    </select>
+                </div>
+            
                 <button class="search-button" type="submit">Поиск</button>
             </form>
         </div>
     </div>
 
     <div class="catalog-container">
-        <div class="property-block">
-            <img src="../img/Квартира 1 1.png" alt="Property 1" class="property-image">
-            <div class="property-info">
-                <h3>3 231 000 ₽</h3>
-                <h4>12 225₽/м²</h4>
-                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
-                <p>ул.Центральная , д.13</p>
-                <p>р-н Большая Островняд</p>
+        <% advertisements.forEach(advertisement => { %>
+            <div class="property-block">
+                <img src="<%= advertisement.image %>" alt="Property" class="property-image">
+                <div class="property-info">
+                    <h3><%= advertisement.price %> ₽</h3>
+                    <h4><%= advertisement.area %> м²</h4>
+                    <h4><%= (advertisement.price / advertisement.area).toFixed(2) %>₽/м²</h4>
+                    <h4><%= advertisement.rooms %> комнаты</h4>
+                    <p><%= advertisement.title %></p>
+                </div>
             </div>
-        </div>
-        <div class="property-block">
-            <img src="../img/Квартира 1 1.png" alt="Property 2" class="property-image">
-            <div class="property-info">
-                <h3>3 231 000 ₽</h3>
-                <h4>12 225₽/м²</h4>
-                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
-                <p>ул.Центральная , д.13</p>
-                <p>р-н Большая Островняд</p>
-            </div>
-        </div>
-        <div class="property-block">
-            <img src="../img/Квартира 1 1.png" alt="Property 3" class="property-image">
-            <div class="property-info">
-                <h3>3 231 000 ₽</h3>
-                <h4>12 225₽/м²</h4>
-                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
-                <p>ул.Центральная , д.13</p>
-                <p>р-н Большая Островняд</p>
-            </div>
-        </div>
-        <div class="property-block">
-            <img src="../img/Квартира 1 1.png" alt="Property 4" class="property-image">
-            <div class="property-info">
-                <h3>3 231 000 ₽</h3>
-                <h4>12 225₽/м²</h4>
-                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
-                <p>ул.Центральная , д.13</p>
-                <p>р-н Большая Островняд</p>
-            </div>
-        </div>
-        <div class="property-block">
-            <img src="../img/Квартира 1 1.png" alt="Property 5" class="property-image">
-            <div class="property-info">
-                <h3>3 231 000 ₽</h3>
-                <h4>12 225₽/м²</h4>
-                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
-                <p>ул.Центральная , д.13</p>
-                <p>р-н Большая Островняд</p>
-            </div>
-        </div>
-        <div class="property-block">
-            <img src="../img/Квартира 1 1.png" alt="Property 6" class="property-image">
-            <div class="property-info">
-                <h3>3 231 000 ₽</h3>
-                <h4>12 225₽/м²</h4>
-                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
-                <p>ул.Центральная , д.13</p>
-                <p>р-н Большая Островняд</p>
-            </div>
-        </div>
-        <div class="property-block">
-            <img src="../img/Квартира 1 1.png" alt="Property 7" class="property-image">
-            <div class="property-info">
-                <h3>3 231 000 ₽</h3>
-                <h4>12 225₽/м²</h4>
-                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
-                <p>ул.Центральная , д.13</p>
-                <p>р-н Большая Островняд</p>
-            </div>
-        </div>
-        <div class="property-block">
-            <img src="../img/Квартира 1 1.png" alt="Property 8" class="property-image">
-            <div class="property-info">
-                <h3>3 231 000 ₽</h3>
-                <h4>12 225₽/м²</h4>
-                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
-                <p>ул.Центральная , д.13</p>
-                <p>р-н Большая Островняд</p>
-            </div>
-        </div>
-        <div class="property-block">
-            <img src="../img/Квартира 1 1.png" alt="Property 9" class="property-image">
-            <div class="property-info">
-                <h3>3 231 000 ₽</h3>
-                <h4>12 225₽/м²</h4>
-                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
-                <p>ул.Центральная , д.13</p>
-                <p>р-н Большая Островняд</p>
-            </div>
-        </div>
-        <div class="property-block">
-            <img src="../img/Квартира 1 1.png" alt="Property 10" class="property-image">
-            <div class="property-info">
-                <h3>3 231 000 ₽</h3>
-                <h4>12 225₽/м²</h4>
-                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
-                <p>ул.Центральная , д.13</p>
-                <p>р-н Большая Островняд</p>
-            </div>
-        </div>
+        <% }) %>
     </div>
+
     <div class="catalog">
         <div class="container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1688.2661237075574!2d34.36577223515128!3d53.24350466746536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1719699961377!5m2!1sru!2sru" width="1320" height="850" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-
     </div>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">

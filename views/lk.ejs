@@ -10,17 +10,17 @@
 <header class="header">
     <div class="container">
         <div class="header-content">
-            <a href="index.html"><img src="../img/Logo.svg"></a>
+            <a href="/"><img src="../img/Logo.svg"></a>
             <ul class="header-menu">
-                <li class="header-menu__item"><a href="index.html" class="header-menu__link ">Главная страница</a></li>
-                <li class="header-menu__item"><a href="catalog.html" class="header-menu__link ">Каталог</a></li>
-                <li class="header-menu__item"><a href="about.html" class="header-menu__link">О нас</a></li>
-                <li class="header-menu__item"><a href="feedback.html" class="header-menu__link header-menu__link--active">Обратная связь</a></li>
-                <li class="header-menu__item"><a href="lk.html" class="header-menu__link">Личный кабинет</a></li>
+                <li class="header-menu__item"><a href="/" class="header-menu__link ">Главная страница</a></li>
+                <li class="header-menu__item"><a href="/catalog" class="header-menu__link ">Каталог</a></li>
+                <li class="header-menu__item"><a href="/about" class="header-menu__link">О нас</a></li>
+                <li class="header-menu__item"><a href="/feedback" class="header-menu__link header-menu__link--active">Обратная связь</a></li>
+                <li class="header-menu__item"><a href="/lk" class="header-menu__link">Личный кабинет</a></li>
             </ul>
             <div class="header-authentication">
-                <a href="login.html" class="header-authentication__button">Войти</a>
-                <a href="registration.html" class="header-authentication__button header-authentication__button--registration">Регистрация</a>
+                <a href="/auth" class="header-authentication__button">Войти</a>
+                <a href="/registration" class="header-authentication__button header-authentication__button--registration">Регистрация</a>
             </div>
         </div>
     </div>
@@ -29,11 +29,26 @@
     <div class="lk">
         <div class="container">
             <div class="lk-content">
-                <div class="lk-advertisement">
-                    <p class="lk-advertisement__title">Объявлений пока нет</p>
-                    <p class="lk-advertisement__subtitle">Но это легко исправить — разместите первое</p>
-                    <a href="/advertisement" class="lk-advertisement__link">Разместить объявление</a>
-                </div>
+                <% if (advertisements.length > 0) { %>
+                    <ul class="lk-advertisements">
+                        <% advertisements.forEach(advertisement => { %>
+                            <li class="lk-advertisement">
+                                <img src="<%= advertisement.image %>" alt="<%= advertisement.title %>" class="lk-advertisement__image">
+                                <div class="lk-advertisement__info">
+                                    <h3 class="lk-advertisement__title"><%= advertisement.title %></h3>
+                                    <p class="lk-advertisement__price"><%= advertisement.price %> ₽</p>
+                                    <p class="lk-advertisement__area"><%= advertisement.area %> м²</p>
+                                </div>
+                            </li>
+                        <% }) %>
+                    </ul>
+                <% } else { %>
+                    <div class="lk-advertisement">
+                        <p class="lk-advertisement__title">Объявлений пока нет</p>
+                        <p class="lk-advertisement__subtitle">Но это легко исправить — разместите первое</p>
+                    </div>
+                <% } %>
+                <a href="/advertisement" class="lk-advertisement__link">Разместить объявление</a>
             </div>
         </div>
     </div>

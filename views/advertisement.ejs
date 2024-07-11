@@ -13,21 +13,28 @@
 <body>
     <div class="advertisement">
         <div class="container">
-            <a href="lk.html" class="advertisement-link">Вернуться в личный кабинет</a>
+            <a href="/lk" class="advertisement-link">Вернуться в личный кабинет</a>
             <div class="advertisement-content">
-                <form class="advertisement-form">
+                <form class="advertisement-form" action="/advertisement" method="POST" enctype="multipart/form-data">
                     <label class="advertisement-form__title">Новое объявление</label>
-                    <input type="text" class="advertisement-form__item" placeholder="Наименование">
-                    <input type="text" class="advertisement-form__item" placeholder="Цена">
-                    <input type="text" class="advertisement-form__item" placeholder="Площадь, м²">
+                    <input type="text" class="advertisement-form__item" name="title" placeholder="Наименование">
+                    <input type="text" class="advertisement-form__item" name="price" placeholder="Цена">
+                    <input type="text" class="advertisement-form__item" name="area" placeholder="Площадь, м²">
+                    <input type="text" class="advertisement-form__item" name="rooms" placeholder="Кол-во комнат">
+                    <select class="advertisement-form__item" name="purpose">
+                        <option value="купить">Купить</option>
+                        <option value="снять">Снять</option>
+                        <option value="продать">Продать</option>
+                        <option value="сдать">Сдать</option>
+                    </select>
                     <div class="advertisement-container">
-                    <label for="file-upload" class="custom-file-upload">
-                        Изображение
-                    </label>
-                    <input id="file-upload" type="file">
-                    <input class="advertisement-button" id="file-button" type="button" value="Прикрепить">
-                </div>
-                <button class="advertisement-form__button">Опубликовать</button>
+                        <label for="file-upload" class="custom-file-upload">
+                            Изображение
+                        </label>
+                        <input id="file-upload" type="file" name="image">
+                        <input class="advertisement-button" id="file-button" type="button" value="Прикрепить">
+                    </div>
+                    <button class="advertisement-form__button">Опубликовать</button>
                 </form>
             </div>
         </div>
