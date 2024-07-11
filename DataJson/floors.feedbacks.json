@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "668ff2834cfff30551f281ae"
+  },
+  "name": "артем",
+  "email": "artem@maul.ru",
+  "message": "верните деньги",
+  "createdAt": {
+    "$date": "2024-07-11T14:56:03.472Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66901efba2336f0e3c323937"
+  },
+  "name": "артем",
+  "email": "serzer@yandex.ru",
+  "message": "сайт хуйня",
+  "createdAt": {
+    "$date": "2024-07-11T18:05:47.669Z"
+  },
+  "__v": 0
+}]

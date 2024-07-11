@@ -16,6 +16,7 @@ router.post('/', async (req, res) => {
     if (user && await user.comparePassword(password)) {
         req.session.userId = user._id;
         res.status(200).send({ success: true, userId: user._id });
+        
     } else {
         res.status(401).send({ success: false, message: 'Invalid credentials' });
     }

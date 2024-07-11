@@ -1,0 +1,97 @@
+[{
+  "_id": {
+    "$oid": "668fe35e81c28861bdeaf95f"
+  },
+  "title": "квартира",
+  "price": 2720000,
+  "area": 36,
+  "image": "uploads/1720705886412.jpg",
+  "__v": 0,
+  "propertyType": "house",
+  "purpose": "продать",
+  "rooms": 4
+},
+{
+  "_id": {
+    "$oid": "668fe402e290331159d7a9cb"
+  },
+  "title": "квартира",
+  "price": 2720000,
+  "area": 36,
+  "image": "uploads/1720706050939.jpg",
+  "rooms": 1,
+  "purpose": "продать",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668fe423e290331159d7a9ce"
+  },
+  "title": "дом",
+  "price": 7100000,
+  "area": 135,
+  "image": "uploads/1720706083934.png",
+  "rooms": 3,
+  "purpose": "продать",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668fe513ea6822b8298844ce"
+  },
+  "title": "квартира",
+  "price": 5000,
+  "area": 200,
+  "image": "uploads/1720706323827.png",
+  "userId": {
+    "$oid": "668fbb780a5a96e0d95579c0"
+  },
+  "rooms": 4,
+  "purpose": "продать",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668fea5ff249bfc01ef8ecee"
+  },
+  "title": "дом",
+  "price": 10500000,
+  "area": 210,
+  "image": "uploads/1720707679056.png",
+  "userId": {
+    "$oid": "668fbb780a5a96e0d95579c0"
+  },
+  "rooms": 4,
+  "purpose": "продать",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668ffd8d85e10eeac3414615"
+  },
+  "title": "квартира",
+  "price": 35000,
+  "area": 67,
+  "image": null,
+  "userId": {
+    "$oid": "668fbb780a5a96e0d95579c0"
+  },
+  "rooms": 2,
+  "purpose": "сдать",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66901e67a2336f0e3c32392d"
+  },
+  "title": "дом",
+  "price": 15600000,
+  "area": 360,
+  "image": null,
+  "userId": {
+    "$oid": "668fbb780a5a96e0d95579c0"
+  },
+  "rooms": 6,
+  "purpose": "продать",
+  "__v": 0
+}]
