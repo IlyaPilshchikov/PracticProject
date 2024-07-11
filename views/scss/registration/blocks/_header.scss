@@ -1,0 +1,46 @@
+.header{
+    padding: 20px 0;
+    &-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-menu{
+        display: flex;
+        gap:44px;
+
+        &__item{
+            font-size: 20px;
+            line-height: 23px;
+            font-family: 'ubuntu', sans-serif;
+
+        }
+
+        &__link{
+
+            &--active{
+            color: #3A8BEA;
+
+        }
+        }
+    }
+
+    &-authentication{
+        display: flex;
+        gap:33px;
+        align-items: center;
+        &__button{
+            font-size: 20px;
+            line-height: 25px;
+            color: #000000;
+            font-family: "allerta",sans-serif;
+            &--registration{
+                background-color: #3A8BEA;
+                color: #FFFFFF;
+                padding: 9px 11px;
+                border-radius: 20px;
+            }
+        }
+    }
+}

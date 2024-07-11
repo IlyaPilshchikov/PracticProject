@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="../scss/catalog/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/"><img src="../img/Logo.svg"></a>
+                <ul class="header-menu">
+                    <li class="header-menu__item"><a href="/" class="header-menu__link ">Главная страница</a></li>
+                    <li class="header-menu__item"><a href="/catalog" class="header-menu__link header-menu__link--active">Каталог</a></li>
+                    <li class="header-menu__item"><a href="/about" class="header-menu__link">О нас</a></li>
+                    <li class="header-menu__item"><a href="/feedback" class="header-menu__link">Обратная связь</a></li>
+                    <li class="header-menu__item"><a href="/ls" class="header-menu__link">Личный кабинет</a></li>
+                </ul>
+
+                <div class="header-authentication">
+                    <a href="/auth" class="header-authentication__button">Войти</a>
+                    <a href="/registration" class="header-authentication__button header-authentication__button--registration">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <div class="form-block">
+            <form class="search-form" action="/search" method="get">
+                <label for="propertyType">Тип недвижимости:</label>
+                <select id="propertyType" name="propertyType">
+                    <option value="apartment">Квартира</option>
+                    <option value="house">Дом</option>
+                </select>
+
+                <label for="roomCount">Количество комнат:</label>
+                <select id="roomCount" name="roomCount">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+
+                <label for="priceRange">Стоимость:</label>
+                <input type="number" id="priceFrom" name="priceFrom" placeholder="От">
+                <input type="number" id="priceTo" name="priceTo" placeholder="До">
+
+                <label for="residentialComplex">Жилой комплекс:</label>
+                <input type="text" id="residentialComplex" name="residentialComplex" placeholder="Название жилого комплекса">
+
+                <label for="area">Площадь:</label>
+                <input type="number" id="areaFrom" name="areaFrom" placeholder="От">
+                <input type="number" id="areaTo" name="areaTo" placeholder="До">
+
+                <button class="search-button" type="submit">Поиск</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="catalog-container">
+        <div class="property-block">
+            <img src="../img/Квартира 1 1.png" alt="Property 1" class="property-image">
+            <div class="property-info">
+                <h3>3 231 000 ₽</h3>
+                <h4>12 225₽/м²</h4>
+                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
+                <p>ул.Центральная , д.13</p>
+                <p>р-н Большая Островняд</p>
+            </div>
+        </div>
+        <div class="property-block">
+            <img src="../img/Квартира 1 1.png" alt="Property 2" class="property-image">
+            <div class="property-info">
+                <h3>3 231 000 ₽</h3>
+                <h4>12 225₽/м²</h4>
+                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
+                <p>ул.Центральная , д.13</p>
+                <p>р-н Большая Островняд</p>
+            </div>
+        </div>
+        <div class="property-block">
+            <img src="../img/Квартира 1 1.png" alt="Property 3" class="property-image">
+            <div class="property-info">
+                <h3>3 231 000 ₽</h3>
+                <h4>12 225₽/м²</h4>
+                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
+                <p>ул.Центральная , д.13</p>
+                <p>р-н Большая Островняд</p>
+            </div>
+        </div>
+        <div class="property-block">
+            <img src="../img/Квартира 1 1.png" alt="Property 4" class="property-image">
+            <div class="property-info">
+                <h3>3 231 000 ₽</h3>
+                <h4>12 225₽/м²</h4>
+                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
+                <p>ул.Центральная , д.13</p>
+                <p>р-н Большая Островняд</p>
+            </div>
+        </div>
+        <div class="property-block">
+            <img src="../img/Квартира 1 1.png" alt="Property 5" class="property-image">
+            <div class="property-info">
+                <h3>3 231 000 ₽</h3>
+                <h4>12 225₽/м²</h4>
+                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
+                <p>ул.Центральная , д.13</p>
+                <p>р-н Большая Островняд</p>
+            </div>
+        </div>
+        <div class="property-block">
+            <img src="../img/Квартира 1 1.png" alt="Property 6" class="property-image">
+            <div class="property-info">
+                <h3>3 231 000 ₽</h3>
+                <h4>12 225₽/м²</h4>
+                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
+                <p>ул.Центральная , д.13</p>
+                <p>р-н Большая Островняд</p>
+            </div>
+        </div>
+        <div class="property-block">
+            <img src="../img/Квартира 1 1.png" alt="Property 7" class="property-image">
+            <div class="property-info">
+                <h3>3 231 000 ₽</h3>
+                <h4>12 225₽/м²</h4>
+                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
+                <p>ул.Центральная , д.13</p>
+                <p>р-н Большая Островняд</p>
+            </div>
+        </div>
+        <div class="property-block">
+            <img src="../img/Квартира 1 1.png" alt="Property 8" class="property-image">
+            <div class="property-info">
+                <h3>3 231 000 ₽</h3>
+                <h4>12 225₽/м²</h4>
+                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
+                <p>ул.Центральная , д.13</p>
+                <p>р-н Большая Островняд</p>
+            </div>
+        </div>
+        <div class="property-block">
+            <img src="../img/Квартира 1 1.png" alt="Property 9" class="property-image">
+            <div class="property-info">
+                <h3>3 231 000 ₽</h3>
+                <h4>12 225₽/м²</h4>
+                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
+                <p>ул.Центральная , д.13</p>
+                <p>р-н Большая Островняд</p>
+            </div>
+        </div>
+        <div class="property-block">
+            <img src="../img/Квартира 1 1.png" alt="Property 10" class="property-image">
+            <div class="property-info">
+                <h3>3 231 000 ₽</h3>
+                <h4>12 225₽/м²</h4>
+                <p>2-комн.кв. 40,9 м² 1/2эт.</p>
+                <p>ул.Центральная , д.13</p>
+                <p>р-н Большая Островняд</p>
+            </div>
+        </div>
+    </div>
+    <div class="catalog">
+        <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1688.2661237075574!2d34.36577223515128!3d53.24350466746536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1719699961377!5m2!1sru!2sru" width="1320" height="850" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-content__text">При копировании материалов активная ссылка на источник обязательна!</p>
+                <div class="footer-container">
+                    <div class="footer-contact">
+                        <p class="footer-contact__number">8 (000) 32-32-32</p>
+                        <p class="footer-contact__work">Контакты<br/>Работа в компании<br/>Мобильная версия<br/>© 2010-2024, ООО «СОВА»</p>
+                    </div>
+                    <p class="footer-information">
+                        Недвижимость<br/>Франшиза<br/>Новостройки от застройщиков<br/>Политика ОПД<br/>Антикоррупционная политика
+                    </p>
+                    <div class="footer-social">
+                        <p class="footer-social__title">Мы в соцсетях</p>
+                        <div class="footer-social-icons">
+                            <a href="#" class="footer-social-icons__link"><img src="../img/telegram.svg" class="footer-social-icons__item"></a>
+                            <a href="#" class="footer-social-icons__link"><img src="../img/viber.svg" class="footer-social-icons__item"></a>
+                            <a href="#" class="footer-social-icons__link"><img src="../img/vk.svg" class="footer-social-icons__item"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

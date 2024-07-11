@@ -1,0 +1,126 @@
+.header {
+  padding: 20px 0;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-menu {
+  display: flex;
+  gap: 44px;
+}
+.header-menu__item {
+  font-size: 20px;
+  line-height: 23px;
+  font-family: "ubuntu", sans-serif;
+}
+.header-menu__link--active {
+  color: #3A8BEA;
+}
+.header-authentication {
+  display: flex;
+  gap: 33px;
+  align-items: center;
+}
+.header-authentication__button {
+  font-size: 20px;
+  line-height: 25px;
+  color: #000000;
+  font-family: "allerta", sans-serif;
+}
+.header-authentication__button--registration {
+  background-color: #3A8BEA;
+  color: #FFFFFF;
+  padding: 9px 11px;
+  border-radius: 20px;
+}
+
+.login {
+  font-family: "allerta", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(../../img/bgimage.png);
+  padding: 70px 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 696px;
+  background-color: rgba(58, 139, 234, 0.8784313725);
+  padding: 50px 50px 135px 54px;
+  border-radius: 30px;
+}
+.login-form__title {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 36px;
+  line-height: 46px;
+  margin-bottom: 116px;
+}
+.login-form__name {
+  max-width: 593px;
+  font-size: 26px;
+  padding: 16px;
+  max-height: 26px;
+  border: solid 4px rgba(36, 0, 255, 0.7803921569);
+  border-radius: 15px;
+}
+.login-form__name::-moz-placeholder { /* Most modern browsers support this now. */
+  color: #9A9A9A;
+  font-size: 26px;
+}
+.login-form__name::placeholder { /* Most modern browsers support this now. */
+  color: #9A9A9A;
+  font-size: 26px;
+}
+.login-form__password {
+  margin-top: 72px;
+  max-width: 593px;
+  font-size: 26px;
+  padding: 16px;
+  max-height: 26px;
+  border: solid 4px rgba(36, 0, 255, 0.7803921569);
+  border-radius: 15px;
+}
+.login-form__password::-moz-placeholder { /* Most modern browsers support this now. */
+  color: #9A9A9A;
+  font-size: 26px;
+}
+.login-form__password::placeholder { /* Most modern browsers support this now. */
+  color: #9A9A9A;
+  font-size: 26px;
+}
+.login-form__button {
+  max-width: 394px;
+  margin-top: 120px;
+  padding: 5px 5px;
+  border-radius: 25px;
+  font-size: 36px;
+  color: #9A9A9A;
+  border: solid 4px rgba(36, 0, 255, 0.7803921569);
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "ubuntu";
+  src: url("../fonts/ubuntu/Ubuntu-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "allerta";
+  src: url("../fonts/allerta/Allerta-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "inter";
+  src: url("../fonts/inter/Inter-Regular.ttf");
+  font-weight: 400;
+}/*# sourceMappingURL=main.css.map */

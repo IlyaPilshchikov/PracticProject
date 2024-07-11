@@ -1,0 +1,97 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логин</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="../scss/login/main.css">
+    <script src="/JS/jquery.js"></script>
+    <link rel="stylesheet" href="header.css">
+    <script src="header.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html"><img src="../img/Logo.svg" alt="Logo"></a>
+                <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="header-menu">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
+                <ul class="header-menu" id="header-menu">
+                    <li class="header-menu__item"><a href="index.html" class="header-menu__link">Главная страница</a></li>
+                    <li class="header-menu__item"><a href="catalog.html" class="header-menu__link">Каталог</a></li>
+                    <li class="header-menu__item"><a href="about.html" class="header-menu__link">О нас</a></li>
+                    <li class="header-menu__item"><a href="feedback.html" class="header-menu__link">Обратная связь</a></li>
+                    <li class="header-menu__item"><a href="lk.html" class="header-menu__link">Личный кабинет</a></li>
+                </ul>
+
+                <div class="header-authentication">
+                    <a href="login.html" class="header-authentication__button">Войти</a>
+                    <a href="registration.html" class="header-authentication__button header-authentication__button--registration">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="login">
+        <form class="login-form" action="/auth" method="POST">
+            <span class="login-form__title">Войти</span>
+            <input type="text" class="login-form__name" name="username" placeholder="Введите логин">
+            <input type="password" class="login-form__password" name="password" placeholder="Введите пароль">
+            <input type="submit" class="login-form__button" value="Войти">
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-content__text">При копировании материалов активная ссылка на источник обязательна!</p>
+                <div class="footer-container">
+                    <div class="footer-contact">
+                        <p class="footer-contact__number">8 (000) 32-32-32</p>
+                        <p class="footer-contact__work">Контакты<br/>Работа в компании<br/>Мобильная версия<br/>© 2010-2024, ООО «СОВА»</p>
+                    </div>
+                    <p class="footer-information">
+                        Недвижимость<br/>Франшиза<br/>Новостройки от застройщиков<br/>Политика ОПД<br/>Антикоррупционная политика
+                    </p>
+                    <div class="footer-social">
+                        <p class="footer-social__title">Мы в соцсетях</p>
+                        <div class="footer-social-icons">
+                            <a href="#" class="footer-social-icons__link"><img src="../img/telegram.svg" class="footer-social-icons__item"></a>
+                            <a href="#" class="footer-social-icons__link"><img src="../img/viber.svg" class="footer-social-icons__item"></a>
+                            <a href="#" class="footer-social-icons__link"><img src="../img/vk.svg" class="footer-social-icons__item"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const form = this;
+            const formData = new FormData(form);
+            fetch('/auth', {
+                method: 'POST',
+                body: new URLSearchParams(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = '/lk';
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
